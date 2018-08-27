@@ -71,8 +71,8 @@ var computerResp =  document.getElementById("computer")
 				}
 				var playerScore = document.getElementById("payerScore")
 				var computerScore = document.getElementById("computerScore")
-				playerScore.innerHTML =  "Score :" + player
-				computerScore.innerHTML =  "Score :" + computer
+				playerScore.innerHTML =  "Score : " + player
+				computerScore.innerHTML =  "Score : " + computer
 			})	
 		})
 	}
