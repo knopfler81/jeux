@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 	<link rel="stylesheet" href="style.css" type="text/css">
+
+    <title>Memory</title>
+  </head>
+
+  <body>
+ 	<?php include('../menu.php'); ?> 
+		<div class="container">
+			<h1 id="myTitle">Memory</h1>
+			<p id="messageStart">Formez les paires, mais attention de ne pas cliquez sur le <span id="popopara">💩</span></p>
+			<p id="clicks"></p>
+			<div class="row" id="mainCards">
+				<h1 id="bigPoo" class="poo">💩</h1>
+				<div class="col-xs-2 cards">
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+				</div>
+				<div class="col-xs-2 cards">
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+				</div>
+				<div class="col-xs-2 cards">
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+				</div>
+				<div class="col-xs-2 cards">
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+				</div>
+				<div class="col-xs-2 cards">
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+				</div>
+				<div class="col-xs-2 cards">
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+
+				</div>
+			</div>
+		</div>
+
+		
+	<script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
+	
