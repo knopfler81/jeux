@@ -1,0 +1,38 @@
+#computer, .hand {
+	font-size: 50px;
+	min-width: 100px;
+	min-height: 100px;
+	margin: 25px;
+
+}
+
+.hidden{
+	visibility: hidden
+}
+
+#chifou {
+	margin-top: 100px;
+}
+
+#messageStart{
+	margin-top: 50px;
+}
+
+
+.game_case_player {
+	text-align: center;
+	margin: 10px;
+	padding: 20px;
+	min-height: 200px;
+	border: 1px solid #6AB0FEFF;
+	background-color: #C2FBFAFF;
+}
+
+.game_case_computer {
+	text-align: center;
+	margin: 10px;
+	padding: 20px;
+	min-height: 200px;
+	border: 1px solid #FA006BFF;
+	background-color: #FDB7C9FF;
+}

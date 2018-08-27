@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
 
     <title>Chifoumi</title>
   </head>
@@ -33,16 +35,23 @@
 		</nav>
 		<div class="container">
 			<h1 id="myTitle">Chifoumi</h1>
-			<div class="row">
-				<button id="start" class="btn btn-primary">
-					Commencer le jeu
-				</button><br>
-				<div class="col-sm-12 hidden" id="game">
-					<h2 id="messageStart"></h2>
-					<button class="game btn btn-primary">pierre</button> 
-					<button class="game btn btn-primary">feuille</button> 
-					<button class="game btn btn-primary">ciseaux</button>
+			<h2 id="messageStart">Clique sur les boutons bleus</h2>
+      <div class="row" id="chifou">
+        <div class="col-sm-6" id="game">
+          <div class="game_case_player">
+          	<p id="payerScore">Score: 0</p>
+            <button class="hand btn btn-primary">👊</button> 
+            <button class="hand btn btn-primary">✋</button> 
+            <button class="hand btn btn-primary">✌️</button>
+          </div>
 				</div>
+        <div class="col-sm-6">
+          <div class="game_case_computer">
+          	<p id="computerScore">Score: 0</p>
+            
+            <button class="btn btn-danger hidden" id="computer"></button>
+          </div>
+        </div>
 			</div>
 		</div>
 

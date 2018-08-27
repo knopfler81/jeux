@@ -1,30 +1,35 @@
-var startBtn = document.getElementById("start")
-var showGame = document.getElementById("game")
+// var startBtn = document.getElementById("start")
+// var showGame = document.getElementById("game")
 var player = 0;
 var computer = 0;
 
-startBtn.addEventListener('click', game);
+// startBtn.addEventListener('click', game);
 
-function game(){
-	showGame.style.visibility = "visible"
-	startBtn.style.visibility = "hidden"
+// function game(){
+// 	showGame.style.visibility = "visible"
+// 	startBtn.style.visibility = "hidden"
 
-	var messageStart = document.getElementById("messageStart")
-	messageStart.innerHTML = "Clique sur un bouton pour affronter l'ordinateur!"
+// 	var messageStart = document.getElementById("messageStart")
+// 	messageStart.innerHTML = "Clique sur un bouton pour affronter l'ordinateur!"
 	
-	play();
-};
+// 	play();
+// };
 
 
 Array.prototype.sample = function(){
   return this[Math.floor(Math.random()*this.length)];
 }
-var buttons = Array.from(document.getElementsByClassName("game"));
+var buttons = Array.from(document.getElementsByClassName("hand"));
+var computerResp =  document.getElementById("computer")
 
 	function play(){
 		buttons.forEach(function(btn){
 			btn.addEventListener('click', function(){
-				var computer_attempt = ["pierre", "feuille", "ciseaux"].sample();
+				btn.style.backgroundColor ="green"
+				setTimeout(function(){
+					btn.style.backgroundColor="#007bff"
+				}, 2000)
+				var computer_attempt = ["👊", "✋", "✌️"].sample();
 				var player_attempt = btn.innerHTML 
 				
 				if((computer || player) < 3){
@@ -34,29 +39,26 @@ var buttons = Array.from(document.getElementsByClassName("game"));
 						messageStart.style.color = "orange"
 						player += 0;
 						computer += 0;
-						console.log("Je suis dans la première boucle")
-						console.log("player " + player)
-						console.log("computer " + computer)
+						computerResp.style.visibility ="visible"
+						computerResp.innerHTML = computer_attempt
 					}
-					else if((player_attempt === "pierre") && (computer_attempt === "ciseaux")|| 
-					(player_attempt === "feuille") && (computer_attempt === "pierre") ||
-					(player_attempt === "ciseaux") && (computer_attempt === "feuille")){
+					else if((player_attempt === "👊") && (computer_attempt === "✌️")|| 
+					(player_attempt === "✋") && (computer_attempt === "👊") ||
+					(player_attempt === "✌️") && (computer_attempt === "✋")){
 						player ++;
 						messageStart.innerHTML = "Bravo tu gagnes!\nL'ordinateur avait choisi " + computer_attempt  + " ton score est de " + player;
 						messageStart.style.color = "green"
-						console.log("Je suis dans la deuxième boucle")
-						console.log("player " + player)
-						
+						computerResp.style.visibility ="visible"
+						computerResp.innerHTML = computer_attempt	
 					}
-					else if((computer_attempt === "pierre") && (player_attempt === "ciseaux")|| 
-					(computer_attempt === "feuille") && (player_attempt === "pierre") ||
-					(computer_attempt === "ciseaux") && (player_attempt === "feuille")){
+					else if((computer_attempt === "👊") && (player_attempt === "✌️")|| 
+					(computer_attempt === "✋") && (player_attempt === "👊") ||
+					(computer_attempt === "✌️") && (player_attempt === "✋")){
 						computer ++;
 						messageStart.innerHTML = "L'ordinateur gagne!\nIl avait choisi " + computer_attempt;
 						messageStart.style.color = "red"
-						console.log("Je suis dans la troisième boucle")
-
-						console.log("computer " + computer)
+						computerResp.style.visibility ="visible"
+						computerResp.innerHTML = computer_attempt
 					}
 				}	
 				else
@@ -70,5 +72,6 @@ var buttons = Array.from(document.getElementsByClassName("game"));
 			})	
 		})
 	}
+	play();
 
 
