@@ -69,6 +69,10 @@ var computerResp =  document.getElementById("computer")
 					startGame.style.visibility = "visible";
 					setTimeout(function(){location.reload()}, 3000)
 				}
+				var playerScore = document.getElementById("payerScore")
+				var computerScore = document.getElementById("computerScore")
+				playerScore.innerHTML =  "Score :" + player
+				computerScore.innerHTML =  "Score :" + computer
 			})	
 		})
 	}
